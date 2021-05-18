@@ -7,7 +7,8 @@ using namespace std;
 struct Node{
     int data;
     struct Node *next;
-};
+}
+//2. insert at back
 //In here, we will show you you the linked list of inserting in the middle
 //When we insert new node in the front and end of node, 
 //all we have to do is,

@@ -9,7 +9,8 @@ struct Node{
     struct Node *next;
 };
 
-//2. insert 
+//2. insert at front
+
 //2 parameters here, 1 for new node and the other one for data passing
 
 void insertlist(Node** head,int data){

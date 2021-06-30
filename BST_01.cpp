@@ -30,3 +30,4 @@ void treedisplay(Node *head,int lvl){
 		treedisplay(head->left,lvl+1);
 	}
 }
+

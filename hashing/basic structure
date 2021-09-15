@@ -1,0 +1,7 @@
+enum data_status{Empty,Occupied,Deleted};
+#define TableSize 10
+struct hash_table_type{
+    int data;
+    enum data_status status;
+    
+};

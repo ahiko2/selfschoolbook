@@ -1,0 +1,31 @@
+//set all empty
+void hash_init(hash_table_type hashtable[]){
+    for(int i=0;i<TableSize;i++){
+        hashtable[i].status=Empty;
+    }
+}
+//insertion
+void hash_insert(int data,hash_table_type hashtable[]){
+    int index,new_index;
+    int key=data;
+    index=hash_function(data);
+    new_index=index;
+    for(int i=0;i<TableSize;i++){
+        //can be insert if empty or old one is deleted
+        if(hashtable[new_index].status==Empty or hashtable[new_index].status==Deleted){
+            //insert data
+            //change empty or delete -> occupied
+            hashtable[new_index].data=data;
+            hashtable[new_index].status=Occupied;           
+        }
+        //erase those duplicated data
+        if(hashtable[new_index].data==key){
+            return;
+        }
+        //increased index place
+        new_index=(index+1)% TableSize;
+        
+    }
+    cout<<"limit exceed"<<endl;
+    exit(-1);
+}

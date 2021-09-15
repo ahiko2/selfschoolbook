@@ -5,3 +5,6 @@ struct hash_table_type{
     enum data_status status;
     
 };
+int hash_function(int key){
+    return (key % TableSize);
+}
